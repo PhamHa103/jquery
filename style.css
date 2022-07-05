@@ -1,3 +1,21 @@
+.validate-error{
+    display: none;
+}
 form{
     border-radius: 50px;
 }
+#table-container{
+    max-width: 100%;
+}
+tr th:nth-child(3), tr td:nth-child(3) {
+    min-width: 100px;
+}
+tr th:nth-child(4), tr td:nth-child(4) {
+    min-width: 120px;
+}
+@media only screen and (min-width: 768px){
+    #table-container{
+        max-height: calc(100vh - 285px);
+    }
+}
+
