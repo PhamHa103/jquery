@@ -1,3 +1,14 @@
+const xhttp = new XMLHttpRequest();
+xhttp.onload = function () {
+    const students = JSON.parse(this.responseText);
+    for (let i = 0; i < students.length; i++) {
+        addStudent(students[i].name, students[i].birthday, students[i].phone, students[i].hometown)
+    }
+}
+xhttp.open("GET", "./student.json");
+xhttp.send();
+
+
 let editingRowId = "";
 function validate(name, birthday, phone, hometown) {
     const result = {

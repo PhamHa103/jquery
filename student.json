@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Pham Thu Ha",
+        "birthday": "2022-02-10",
+        "phone": "0123456789",
+        "hometown": "Ha Noi"
+    },
+    {
+        "name": "Pham Van A",
+        "birthday": "1998-05-18",
+        "phone": "1231231231",
+        "hometown": "Hai Phong"
+    },
+    {
+        "name": "Tran Thi B",
+        "birthday": "1993-08-20",
+        "phone": "4564564564",
+        "hometown": "Quang Ninh"
+    },
+    {
+        "name": "Tran Van Ba",
+        "birthday": "2020-12-09",
+        "phone": "7897897897",
+        "hometown": "Da Nang"
+    }
+]
