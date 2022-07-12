@@ -161,4 +161,9 @@ $("#buttonEdit").click(function () {
         $("#hometown").val(editCols[4].innerText);
     }
 })
-
+$("#buttonReset").click(function () {
+    $("#nameError").hide();
+    $("#birthdayError").hide();
+    $("#phoneError").hide();
+    $("#hometownError").hide();
+})
