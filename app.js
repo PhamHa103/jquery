@@ -2,7 +2,7 @@ const xhttp = new XMLHttpRequest();
 xhttp.onload = function () {
     const students = JSON.parse(this.responseText);
     for (let i = 0; i < students.length; i++) {
-        addStudent(students[i].name, students[i].birthday, students[i].phone, students[i].hometown)
+        addStudent(students[i].name, students[i].birthday, students[i].phone, students[i].hometown, true)
     }
 }
 xhttp.open("GET", "./student.json");
@@ -55,7 +55,7 @@ function onChangeCheckbox(rowId) {
     });
 }
 
-function addStudent(name, birthday, phone, hometown) {
+function addStudent(name, birthday, phone, hometown, disbleAlert) {
     const idOfRow = new Date().getTime();
     const studentRow = `
     <tr id="${idOfRow}">
@@ -70,7 +70,9 @@ function addStudent(name, birthday, phone, hometown) {
     `
     $("#tableBody").append(studentRow);
     onChangeCheckbox(idOfRow);
-    alert("Add success!");
+    if (!disbleAlert) {
+        alert("Add success!");
+    }
 }
 
 function editStudent(name, birthday, phone, hometown) {
